@@ -9,8 +9,6 @@ def binary_serch(items, target):
         mid = math.ceil((high + low) / 2)
         candidate = items[mid]
 
-        print(candidate, mid, low, high)
-
         if candidate == target:
             return mid
 
