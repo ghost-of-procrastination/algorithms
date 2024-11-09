@@ -32,8 +32,7 @@ def rec_count(arr: List[Any]) -> int:
 
 def rec_bin_search(arr: List[int], target: int, offset: int = 0) -> int:
     high = len(arr) - 1
-    low = 0
-    mid = math.ceil((high + low) / 2)
+    mid = math.ceil(high / 2)
     mid_item = arr[mid]
 
     if mid_item == target:
