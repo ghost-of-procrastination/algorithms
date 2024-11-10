@@ -1,4 +1,7 @@
 const binarySearch = (list: number[], target: number) => {
+    
+}
+const binarySearch = (list: number[], target: number) => {
 	let low = 0
 	let high = list.length - 1
 
