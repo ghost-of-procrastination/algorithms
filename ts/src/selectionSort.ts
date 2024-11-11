@@ -1,4 +1,4 @@
-const arrayNotEmpty = (arr: any[]) => !!arr && arr instanceof Array && arr.length > 0
+import { arrayNotEmpty } from './helpers/arrayNotEmpty'
 
 enum TargetValue {
 	min = 'min',
