@@ -1,5 +1,5 @@
 from collections import deque
-from typing import Dict, List, Optional
+from typing import Dict, List
 import undirected
 import directed
 
@@ -30,12 +30,5 @@ def bf_search(graph: Dict[str, List[str]], start: str, target: str) -> List[str]
     return None
 
 
-print(bf_search(directed.countries_graph, directed.SW, directed.AU))
-print(bf_search(undirected.cities_graph, undirected.DE, undirected.LA))
-
-
-queue = deque(['qwe'])
-queue.append('a')
-queue.append('a')
-
-print(queue)
+print(bf_search(directed.perks_graph, directed.ENTRY, directed.ADA))
+print(bf_search(undirected.cities_graph, undirected.DE, undirected.SE))

@@ -1,19 +1,23 @@
-SW = 'Switzerland'
-AU = 'Austria'
-GR = 'Germany'
-IT = 'Italy'
-FR = 'France'
-PL = 'Poland'
-SP = 'Spain'
-UK = 'United Kingdom'
+ENTRY = 'SLIPPERY'
+DA = 'DASH'
+ADA = 'AIR DASH'
+MDA = 'MAD DASH'
+FAT = 'FLASH AND THUNDERCLAP'
+LNS = 'LEAD AND STEEL'
+BD = 'BULLET DEFLECT'
+FB = 'FINISHER: BLADERUNNER'
+SN = 'SEEING DOUBLE'
+TW = 'TAILWIND'
 
-countries_graph = {
-    SW: [GR, IT, FR],
-    PL: [AU],
-    GR: [PL],
-    IT: [AU],
-    FR: [SP, UK],
-    AU: [],
-    SP: [],
-    UK: [],
+perks_graph = {
+    ENTRY: [DA, LNS],
+    DA: [ADA, MDA],
+    LNS: [BD, FB, SN],
+    MDA: [FAT],
+    SN: [FAT],
+    ADA: [TW],
+    FAT: [],
+    BD: [],
+    FB: [],
+    TW: [],
 }
