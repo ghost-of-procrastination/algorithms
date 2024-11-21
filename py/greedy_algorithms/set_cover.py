@@ -1,5 +1,4 @@
-from typing import Set, List, Dict
-from math import inf
+from typing import List, Dict
 
 MT = 'mt'
 WA = 'wa'
@@ -19,36 +18,28 @@ stations = {
     'kfive': [CA, AZ]
 }
 
+
 def set_cover(targets: List[str], covering: Dict[str, List[str]]) -> List[str]:
-    covered = set()
-    checked = []
+    targets_uncovered = set(targets)
+    result = set()
 
-    # while True:
-    #
-    #
-    # for item in covering:
-    #     item_targets = covering[item]
+    covering_sets = {item: set(area) for item, area in covering.items()}
 
-    for item, area in covering.items():
-        print(item, area)
-        best_item = ''
-
-
+    while targets_uncovered:
+        best_item = None
         covered = set()
 
+        for item, area in covering_sets.items():
+            covered_by_item = targets_uncovered & area
 
+            if len(covered) < len(covered_by_item):
+                best_item = item
+                covered = covered_by_item
 
-    #
-    # while len(covered) < len(targets):
-    #     for target in covering[longest]:
-    #         if
-    #
-    #     covered.update(covering[longest])
-    #     checked.append(longest)
-    #     print(longest)
+        targets_uncovered -= covered
+        result.add(best_item)
 
-
-    return targets
+    return list(result)
 
 
 print(set_cover(target_states, stations))
